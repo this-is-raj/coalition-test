@@ -48,7 +48,10 @@
             function addProduct () {
                 $.ajax({
                     'type': 'POST',
-                    'url': '{{ route() }}'
+                    'url': '{{ route('products.store') }}',
+                    'data': $('#product-form').serialize(),
+                    'success': function () {},
+                    'error': function () {}
                 });
             }
         });
