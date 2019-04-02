@@ -41,7 +41,9 @@
             'type': 'POST',
             'url': '{{ route('products.update', $product->id) }}',
             'data': $('#product-form').serialize(),
-            'success': function () {},
+            'success': function () {
+                window.location.href = '{{ route('products.index') }}';
+            },
             'error': function () {}
         });
     }

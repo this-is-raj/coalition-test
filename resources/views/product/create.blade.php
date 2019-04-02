@@ -40,7 +40,9 @@
                 'type': 'POST',
                 'url': '{{ route('products.store') }}',
                 'data': $('#product-form').serialize(),
-                'success': function () {},
+                'success': function () {
+                    window.location.href = '{{ route('products.index') }}';
+                },
                 'error': function () {}
             });
         }
